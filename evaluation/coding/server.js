@@ -3,10 +3,6 @@
 
  const app = express()
 
- const connect = () => {
-     return mongoose.connect("mongodb://localhost:27017/test")
-     useNewUrlparser : true;
-     useCreateIndex : true;
-     useunifiedTopology : true;
-     
- }
+app.listen(3300, function() {
+    console.log("listening on port 3300")
+})
