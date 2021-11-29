@@ -12,6 +12,8 @@
      })
  }
 
+ const jobSchema = new mongoose.Schema()
+
  const app = express()
 
 app.listen(3300, function() {
