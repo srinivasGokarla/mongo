@@ -6,4 +6,12 @@ const userSchema = new mongoose.Schema({
     password : {type: String, required: true},
     profile_photo_url : {type: String, required: true},
     roles : {type: String, required: true}
+}, {
+versionKey: false,
+timestamps: true,
+
 })
+
+const User = mongoose.model("user",userSchema)
+
+module.exports = User
