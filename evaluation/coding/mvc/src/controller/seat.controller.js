@@ -3,7 +3,7 @@ const express = require("express")
 const router = express.Router();
 
 const Seat = require("../models/seat.model")
-const Post = require("../models/screen.model")
+const Post = require("../models/show.model")
 const crudController = require("./crud.controller")
 
 router.post("",crudController.post(Seat))
