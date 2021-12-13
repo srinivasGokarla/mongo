@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const showSchema = new mongoose.Schema({
     timing : {type: Number, required: true},
-    movie : [{type: mongoose.Schema.Types.ObjectId, ref:"theatre", required: true}],
+    movie : [{type: mongoose.Schema.Types.ObjectId, ref:"movie", required: true}],
     screen : [{type: mongoose.Schema.Types.ObjectId, ref:"screen", required: true}],
     seats:  {type: Number, required: true}
     
