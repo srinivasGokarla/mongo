@@ -5,7 +5,7 @@ const router = express.Router();
 const User = require("../models/user.model")
 const crudController = require("./crud.controller")
 
-router.post("",crudController(User))
+router.post("",crudController.post(User))
 router.get("", async(req,res) => {
     const users = await User.find().sort({id:-1}).lean().exec()
 
@@ -13,9 +13,9 @@ router.get("", async(req,res) => {
 });
 
 
-router.patch("/:id",crudController.updateOne(User))
-router.delete("/:id",crudController.deleteOne(User))
-router.get("/:id",crudController.geteOne(User))
+router.patch("/:id", crudController.updateOne(User))
+router.delete("/:id", crudController.deleteOne(User))
+router.get("/:id", crudController.getOne(User))
 
 
 module.exports = router
